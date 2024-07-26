@@ -444,32 +444,34 @@ section {
   right: 7rem;
 }
 
+/* Projects Page */
 .projects-page {
   padding: 5rem 10%;
 }
 
-/* Grid Layout for Projects Section */
+/* Projects Section */
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 2rem; /* Spacing between projects */
+  gap: 20px; /* Consistent spacing */
+  max-width: 1050px;
+  width: 90%;
+  margin-top: 50px;
 }
 
 /* Project Container */
 .project {
   background: var(--white);
-  box-shadow: var(--box-shadow);
-  padding: 2rem;
+  box-shadow: var(--light-bg);
   border-radius: .5rem;
-  transition: transform .3s ease, box-shadow .3s ease;
-  overflow: hidden; /* Ensures contents don't overflow container */
-}
-
-/* Project Heading */
-.project h2 {
-  font-size: 2.5rem; /* Larger heading */
-  color: var(--yellow);
-  margin-bottom: .5rem;
+  overflow: hidden;
+  transition: all ease 0.2s;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Project Hover Effect */
@@ -480,26 +482,31 @@ section {
 
 /* Project Image */
 .project img {
-  width: 75%;
-  height: auto;
-  border-radius: .5rem;
-  margin-bottom: 1rem;
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+  object-position: center;
+  transition: all ease 0.2s;
 }
 
-/* Project Title */
+/* Project Text */
+.project h2 {
+  font-size: 2.5rem; /* Larger heading */
+  color: var(--yellow);
+  margin-bottom: .5rem;
+}
+
 .project h3 {
   font-size: 1.8rem;
   color: var(--black);
   margin-bottom: .5rem;
 }
 
-/* Project Description */
 .project p {
   font-size: 1.4rem;
   color: var(--light-color);
 }
 
-/* Project Details */
 .project .details {
   font-size: 1.4rem;
   color: var(--black);
@@ -508,6 +515,49 @@ section {
 .project .details span {
   display: block;
   margin-bottom: .5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Consistent spacing */
+  }
+
+  .project {
+    margin-bottom: 1.5rem;
+  }
+
+  .project img {
+    height: 12rem;
+  }
+
+  .project .details {
+    font-size: 1.4rem;
+  }
+
+  .project .details span {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects {
+    grid-template-columns: 1fr; /* 1 column */
+    gap: 20px; /* Consistent spacing */
+  }
+
+  .project img {
+    height: 10rem;
+  }
+
+  .project .details {
+    font-size: 1.2rem;
+  }
+
+  .project .details span {
+    font-size: 1rem;
+  }
 }
 
 .footer {
