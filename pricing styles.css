@@ -443,6 +443,7 @@ section {
 .home .swiper-button-prev {
   right: 7rem;
 }
+
 .pricing {
   background: var(--light-bg);
 }
@@ -507,122 +508,129 @@ section {
 
 .pricing .box .btn {
   margin-top: auto;
+  align-self: center;
 }
+
 
 .footer {
-  background: var(--black);
-  color: var(--white);
-  padding: 30px;
-  text-align: center;
-  border-top: 2px solid var(--light-color);
-}
-
-.footer .logo {
-  color: var(--white);
-  font-size: 2.4rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer .logo:hover {
-  color: var(--black);
-}
-
-.footer .links a {
-  color: var(--white);
-  text-decoration: none;
-  font-size: 2rem;
-  margin: 0 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.footer .links a:hover {
-  color: var(--black);
-}
-
-.footer .credit {
-  margin-top: 20px;
-  font-size: 1.4rem;
-  color: #ffffff;
-  transition: color 0.3s ease;
-}
-
-.footer .credit .developer-info a {
-  color: var(--yellow);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer .credit .developer-info a:hover {
-  color: var(--white);
-}
-
-.footer .credit .orignal {
-  margin-top: 10px;
-}
-
-@media (max-width: 1200px) {
-  .header {
-    padding: 1.5rem 2rem;
-  }
-  section {
-    padding: 3rem 5%;
-  }
-}
-
-@media (max-width: 991px) {
-  html {
-    font-size: 55%;
-  }
-  section {
-    padding: 3rem 2rem;
-  }
-  .header #menu-btn {
-    display: inline-block;
-  }
-  .header .navbar {
-    position: absolute;
-    top: 99%;
-    left: 0;
-    right: 0;
-    background: var(--white);
-    border-top: var(--border);
-    border-bottom: var(--border);
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    transition: .2s linear;
-  }
-  .header .navbar.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  .header .navbar a {
-    display: block;
-    margin: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .header .search-form {
-    width: 90%;
-  }
-  .header .login-form {
-    width: 90%;
-  }
-  .home .slide {
-    justify-content: center;
-  }
-  .home .slide .content {
+    background: var(--black);
+    color: var(--white);
+    padding: 30px;
     text-align: center;
+    border-top: 2px solid var(--light-color); /* Add a top border */
   }
-  .home .slide .content h3 {
-    font-size: 3rem;
+  
+  .footer .logo {
+    color: var(--white);
+    font-size: 2.4rem;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Add transition for color change */
   }
-}
-
-@media (max-width: 450px) {
-  html {
-    font-size: 50%;
+  
+  .footer .logo:hover {
+    color: var(--black); /* Change color on hover */
   }
-  .about .row .content h3 {
-    font-size: 2.5rem;
+  
+  .footer .links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 0 1.5rem;
+    transition: color 0.3s ease; /* Add transition for color change */
   }
-}
+  
+  .footer .links a:hover {
+    color: var(--black); /* Change color on hover */
+  }
+  
+  .footer .credit {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    color: #ffffff;
+    transition: color 0.3s ease; /* Add transition for color change */
+  }
+  
+  .footer .credit .developer-info a {
+    color: var(--yellow);
+    text-decoration: none;
+    transition: color 0.3s ease; /* Add transition for color change */
+  }
+  
+  .footer .credit .developer-info a:hover {
+    color: var(--white); /* Change color on hover */
+  }
+  
+  .footer .credit .orignal {
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 1200px) {
+    .header {
+      padding: 1.5rem 2rem;
+    }
+    section {
+      padding: 3rem 5%;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    html {
+      font-size: 55%;
+    }
+    section {
+      padding: 3rem 2rem;
+    }
+    .header #menu-btn {
+      display: inline-block;
+    }
+    .header .navbar {
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-top: var(--border);
+      border-bottom: var(--border);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+              clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      -webkit-transition: .2s linear;
+      transition: .2s linear;
+    }
+    .header .navbar.active {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .navbar a {
+      display: block;
+      margin: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header .search-form {
+      width: 90%;
+    }
+    .header .login-form {
+      width: 90%;
+    }
+    .home .slide {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+    .home .slide .content {
+      text-align: center;
+    }
+    .home .slide .content h3 {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    html {
+      font-size: 50%;
+    }
+    .about .row .content h3 {
+      font-size: 2.5rem;
+    }
+  }
