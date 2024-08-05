@@ -131,8 +131,9 @@ section {
   line-height: 2;
 }
 
-.pricing .box .btn {
-  margin-top: auto;
+.pricing .box-container .box .btn {
+  margin-top: auto; 
+  align-self: center; 
 }
 
 .footer {
